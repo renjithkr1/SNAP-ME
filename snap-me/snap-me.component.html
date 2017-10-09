@@ -1,0 +1,14 @@
+<div>
+<div id="error_msg" class="" ng-show="!$ctrl.webcamError">
+    <span>Webcam could not be started.
+        <br> Did you give access to it?</span>
+</div>
+
+<webcam id="cam" channel="$ctrl.channel" on-streaming="$ctrl.onSuccess()" on-error="$ctrl.onError(error)" on-stream="$ctrl.onStream(stream)"></webcam>
+</div>
+<div>
+    <md-button id="btn" class="md-raised md-primary" ng-click="$ctrl.makeSnapshot()">take picture</md-button>
+</div>
+<div>
+    <canvas id="snapshot" width="300" height="300"></canvas>
+</div>
